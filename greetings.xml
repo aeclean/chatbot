@@ -12,6 +12,12 @@
                 <var name="UserName" value="$Text" scope="user"/>
                 <output value="Nice to meet you, $UserName!"/> <!-- Using the placeholder in output -->
             </input>
+
+            <output value="Now I have a question for you: who is best soccer player ever?" />
+            <input pattern="$Text">
+                <var name="Player" value="$Text" />
+                <output if="lowecase($Player) != 'Pele|Pelé'" value="Come on, you now it's Pelé" />
+            </input>
         </context>
     </input>
 </context>
